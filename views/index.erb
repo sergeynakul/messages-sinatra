@@ -1,0 +1,12 @@
+<h1>Messages</h1>
+
+<ul>
+<% @messages.each do |message| %>
+ <li>
+   <h4><a href="/messages/<%= message.id %>">Message <%= message.id %></a></h4>
+   <p>Created: <%= message.created_at %></p>
+ </li>
+<% end %>
+</ul>
+
+<%= params["body"] %>
